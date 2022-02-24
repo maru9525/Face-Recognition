@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Register</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="/css/register.css">
+    <link href="http://fonts.googleapis.com/earlyaccess/jejugothic.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="/">H O M E</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li>
+                <a class="nav-link" href="/register">회원등록</a></li>
+            <li>
+                <a class="nav-link" href="/rekognition">얼굴인식</a></li>
+            <li>
+                <a class="nav-link" href="/list">회원관리</a></li>
+            <li>
+                <a class="nav-link"  href="/logout">로그아웃</a></li>
+        </ul>
+    </div>
+</nav>
+<h1 id="title"> 회원수정</h1>
+<div id="cma_image" style="width:100%;max-width:100%;"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<div class="preview">
+    <script>
+        function getThumbnailPrivew(html, $target) {
+            if (html.files && html.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $target.css('display', '');
+                    $target.html('<img src="' + e.target.result + '"  width="400" height="300" alt="" class="preview"/>');
+                }
+                reader.readAsDataURL(html.files[0]);
+            }
+        }
+    </script>
+</div>
+<form class="register" action="/update?id=<%=data.Id%>" method="post" enctype="multipart/form-data" autocapitalize="off" style="font-size: 1rem">
+    <div class="form-group">
+        <label for="inputusername"></label>
+    </div>
+
+    <div>
+        <input type="text" class="form-control" id="inputEmail4" name="username" placeholder="이   름">
+
+    </div>
+    <div class="form-group">
+        <label for="inputpassword"></label>
+        <input type="password" class="form-control" id="inputPassword4" name="password" placeholder="Password">
+    </div>
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+            </div>
+            <div class="custom-file" style=>
+                <input type="file" class="custom-file-input" id="inputGroupFile01" name="cma_file"
+                       aria-describedby="inputGroupFileAddon01"accept="image/*"  capture="camera" onchange="getThumbnailPrivew(this,$('#cma_image'))">
+                <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+            </div>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-lg btn-primary btn-block">Sign in</button>
+    <input type="hidden" name="level" value="user">
+
+</form>
+</body>
+</html>

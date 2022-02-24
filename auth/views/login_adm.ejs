@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>회원인증시스템</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="/">H O M E</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li>
+                <a class="nav-link" href="/register">회원등록</a></li>
+            <li>
+                <a class="nav-link" href="/rekognition">얼굴인식</a></li>
+            <li>
+                <a class="nav-link" href="/list">회원관리</a></li>
+            <li>
+                <a class="nav-link"  href="/logout">로그아웃</a></li>
+        </ul>
+    </div>
+</nav>
+<main role="main">
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-3">Face Recognition!</h1>
+            <p>이제 얼굴만으로 간단히 본인인증하세요.</p>
+            <p>Face Rekognition을 사용하면 어플리케이션에 이미지 분석 기능을 쉽게 추가할 수 있습니다.
+                이미지를 Rekognition API에 제공하기만 하면, 서비스에서 사람을 식별하고 탐지할 수 있습니다.
+                Face Rekognition은 여러분이 제공하는 이미지 매우 정확한 얼굴 분석 및 얼굴 인식을 제공합니다.
+                사용자 확인, 인원 계산 및 공공 안전 등 다양한 사용 사례에서 얼굴을 탐지, 분석 및 비교할 수 있습니다.
+                Face Rekognition은 저장된 이미지 파일을 신속하게 분석할 수 있는 간단하고 사용이 쉬운 API입니다.
+                Face Rekognition은 새로운 데이터를 통해 끊임없이 학습하고 있으며, 업데이트되고 있습니다.</p>
+        </div>
+    </div>
+    <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+            <div class="col-md-4">
+                <h2> 얼굴 인식</h2>
+                <p><img src="images/기능1.png" class="image" ></p>
+                <p>카메라를 통해 빠르고 정확하게 사람의 얼굴 이미지를 식별할 수 있습니다.</p>
+                <p>그저 카메라만 응시하세요. 인식은 우리가 하겠습니다.</p>
+            </div>
+            <div class="col-md-4">
+                <h2>얼굴 분석 및 비교</h2>
+                <p><img src="images/기능2.png" class="image"></p>
+                <p>인식한 얼굴을 빠르고 정확하게 분석할 수 있습니다.</p>
+                <p>분석한 얼굴의 데이터와 서버에 저장되어 있는 얼굴 이미지를 분석하여 비교 기능까지 완벽합니다.</p>
+            </div>
+            <div class="col-md-4">
+                <h2> 반갑습니다.</h2>
+
+            </div>
+        </div>
+        <hr>
+    </div>
+</main>
+</body>
+</html>

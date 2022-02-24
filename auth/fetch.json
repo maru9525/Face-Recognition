@@ -1,0 +1,5 @@
+{
+  method: 'post',
+  body:    JSON.parse(body),
+  headers: { 'Content-Type': 'application/json' },
+}

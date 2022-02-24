@@ -1,0 +1,15 @@
+body {
+    padding-top: 5rem;
+}
+#title{
+    width: 10%;
+    margin: 5% auto;
+}
+.register{
+    width: 300px;
+    margin: 0 auto;
+}
+.preview {
+    position: relative;
+    left: 38%;
+}

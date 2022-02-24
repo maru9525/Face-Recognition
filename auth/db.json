@@ -1,0 +1,7 @@
+{
+    "host": "localhost",
+    "user": "hun",
+    "password" : "auth@",
+    "port" : "3306",
+    "database" : "faceDB"
+}
